@@ -223,8 +223,7 @@ PRODUCT BANNERS
 
 #banner-image {
   width: 100%;
-  height: 50vh;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /***************
@@ -296,6 +295,19 @@ MEDIA QUERY
     text-decoration: none;
     font-size: 1.2rem;
     color: black;
+  }
+
+  /*=========
+  SCROLL-SNAP
+  =========*/
+
+  .scroll-container {
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+  }
+
+  .scroll-area {
+    scroll-snap-align: start;
   }
 
 }
