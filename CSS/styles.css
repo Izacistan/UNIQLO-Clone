@@ -1,0 +1,301 @@
+/**********
+TEST STYLES
+**********/
+
+
+/***************
+UNIVERSAL STYLES
+***************/
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+#divider {
+  border: 1px solid black;
+}
+
+/************
+HEADER STYLES
+************/
+
+#header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background-color: white;
+  border-bottom: 1px solid black;
+  position: sticky;
+  top: 0px;
+}
+
+#header-img {
+  height: 41px;
+  margin: 0px 10px 0px 10px;
+  z-index: 1;
+}
+
+#nav-bar {
+  display: none;
+}
+
+/*================
+BURGER ICON STYLES
+================*/
+#burger-icon {
+  z-index: 1;
+  position: fixed;
+  top: 20px;
+  right: 0px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.bar {
+  height: 5px;
+  width: 25px;
+  background-color: black;
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+/* Space Bars 1 and 3 away from each other. Middle Bar does NOT need to be moved */
+
+.bar {
+  height: 3px;
+}
+
+#bar1 {
+  transform: translateY(-4px);
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+/*============
+MENU ANIMATION
+============*/
+
+/*
+1) The class 'active' is located in mobile-menu.js file (look in the function)
+2) When the 'burger-icon' is clicked, it toggles 'active' on/off
+3) This will allow us to toggle certain animations on/off
+*/
+
+/* Animate bars 1 and 3 when menu icon is selected*/
+
+.active .bar {
+  background-color: black;
+}
+
+.active #bar1 {
+  transform: translateY(3px) rotateZ(-45deg);
+}
+
+.active #bar3 {
+  transform: translateY(-3px) rotate(45deg);
+}
+
+/* Make bar 2 disappear when menu icon is selected */
+.active #bar2 {
+  opacity: 0;
+}
+
+/*=================
+MENU/SIDEBAR STYLES
+==================*/
+
+#burger-menu {
+  position: fixed;
+  top: 0;
+  transform: translate(-100%);
+  transition-duration: 0.5s;
+  width: 100%;
+  height: 100vh;
+  background: white;
+}
+
+#burger-menu ul {
+  position: relative;
+  margin-top: 50px;
+  line-height: 70px;
+}
+
+.menu-item {
+  font-size: 1.2rem;
+}
+
+#burger-menu ul li {
+  list-style: none;
+}
+
+#burger-menu.active {
+  transform: translate(-15px);
+  transition-duration: 0.5s;
+}
+
+/* MOBILE MENU ITEMS */
+
+/* Condense at later date */
+#collapse1,
+#collapse2,
+#collapse3,
+#collapse4 {
+  display: none;
+}
+/* Condense at later date */
+#collapse1.sub-menu-active,
+#collapse2.sub-menu-active,
+#collapse3.sub-menu-active,
+#collapse4.sub-menu-active {
+  display: flex;
+}
+
+.sub-menu {
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #e6e6e6;
+  padding: 1.0625rem 1rem 0;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.accordion .first-item {
+  margin-top: 100px;
+}
+
+/* SUB-MENU-ITEMS */
+
+#burger-menu ul li .sub-menu-item {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+#burger-menu #burger-sign-in-btn {
+  padding: 15px;
+  color: white;
+  border-radius: 0;
+  background: #fc0d1b;
+  font-weight: bold;
+  border: none;
+}
+
+/************
+VIDEO BANNER
+************/
+
+#video {
+  width: 99%;
+  height: 90vh;
+}
+
+
+/**************
+PRODUCT BANNERS
+**************/
+
+.product-header {
+  margin: auto;
+  padding: 10px;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  background-color: #FC0D1B;
+}
+
+#banner-image {
+  width: 100%;
+  height: 50vh;
+  object-fit: contain;
+}
+
+/***************
+EMAIL NEWSLETTER
+***************/
+
+form {
+  margin: auto;
+  width: 305px;
+  text-align: center;
+}
+
+h3 {
+  text-align: left;
+}
+
+p {
+  text-align: left;
+}
+
+#email {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+#submit {
+  padding: 10px;
+  color: white;
+  border-radius: 0;
+  background: #fc0d1b;
+  font-weight: bold;
+  border: none;
+}
+
+/*============
+MEDIA QUERY
+============*/
+
+@media (min-width: 667px) {
+  #burger-menu ul {
+    line-height: 55px;
+  }
+}
+
+/* While screen size is below 769px, the burger icon remains visible. */
+@media (min-width: 769px) {
+
+/*  HEADER STYLES (TABLETS and above)  */
+
+  #header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #burger-icon {
+    display: none;
+  }
+
+  #burger-menu {
+    display: none;
+  }
+
+  #nav-bar {
+    display: flex;
+  }
+
+  #nav-bar a {
+    padding: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+  }
+
+}

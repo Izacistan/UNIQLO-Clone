@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <title>UNIQLO - Homepage</title>
+  <header id="header">
+
+    <img id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/9/92/UNIQLO_logo.svg" onclick="topFunction()">
+    <nav id="nav-bar">
+      <a class="nav-link" href="#women-header">WOMEN</a>
+      <a class="nav-link" href="#men-header">MEN</a>
+      <a class="nav-link" href="#kids-header">KIDS</a>
+      <a class="nav-link" href="#baby-header">BABY</a>
+    </nav>
+
+    <div id="burger-icon">
+       <div id="bar1" class="bar"></div>
+       <div id="bar2" class="bar"></div>
+       <div id="bar3" class="bar"></div>
+    </div>
+  <!-- MOBILE MENU -->
+    <nav id="burger-menu">
+      <ul class="accordion">
+  <!--    Each one of these <li>'s contains a sub-menu.    -->
+        <li class="accordion-menu-item first-item" data-dropdown>
+          <span id="dropdown-toggle-women" class="dropdown-toggle link" onclick="dropdownMenuClicked()">Women</span>
+          <div id="collapse1" class="sub-menu">
+            <a id="women" class="sub-menu-item" href="#">Tops</a>
+            <a id="women" class="sub-menu-item" href="#">Bottoms</a>
+            <i><a id="women" class="sub-menu-item" href="#">View All</a></i>
+          </div>
+        </li>
+        <li class="accordion-menu-item" data-dropdown>
+          <span id="dropdown-toggle-men"class="dropdown-toggle link" onclick="dropdownMenuClicked()">Men</span>
+          <div id="collapse2" class="sub-menu">
+            <a id="men" class="sub-menu-item" href="#">Tops</a>
+            <a id="men" class="sub-menu-item" href="#">Bottoms</a>
+            <i><a id="men" class="sub-menu-item" href="#">View All</a></i>
+          </div>
+        </li>
+        <li class="accordion-menu-item" data-dropdown>
+          <span id="dropdown-toggle-kids" class="dropdown-toggle link" onclick="dropdownMenuClicked()">Kids</span>
+          <div id="collapse3" class="sub-menu">
+            <a id="kids" class="sub-menu-item" href="#">Tops</a>
+            <a id="kids" class="sub-menu-item" href="#">Bottoms</a>
+            <i><a id="kids" class="sub-menu-item" href="#">View All</a></i>
+          </div>
+        </li>
+        <li class="accordion-menu-item" data-dropdown>
+          <span id="dropdown-toggle-baby" class="dropdown-toggle link" onclick="dropdownMenuClicked()">Baby</span>
+          <div id="collapse4" class="sub-menu">
+            <a id="baby" class="sub-menu-item" href="#">Tops</a>
+            <a id="baby" class="sub-menu-item" href="#">Bottoms</a>
+            <i><a id="baby" class="sub-menu-item" href="#">View All</a></i>
+          </div>
+        </li>
+        <li>
+          <button id="burger-sign-in-btn">SIGN IN</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+    <div id="video-container">
+      <iframe id="video" width="420" height="315"
+        src="https://www.youtube.com/embed/lm76ZUNz0s8">
+      </iframe>
+    </div>
+
+    <div id="product-banner-container">
+      <h2 id="women-header" class="product-header">Women</h2>
+      <img id="banner-image" src="https://image.uniqlo.com/UQ/ST3/us/imagesother/home/220103-L1-SP-w-leggingspants.jpg">
+
+      <h2 id="men-header" class="product-header">Men</h2>
+      <img id="banner-image" src="https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/447004/item/goods_64_447004.jpg?width=734">
+
+      <h2 id="kids-header" class="product-header">Kids</h2>
+      <img id="banner-image" src="https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/445128/item/goods_55_445128.jpg?width=734">
+
+      <h2 id="baby-header" class="product-header">Baby</h2>
+      <img id="banner-image" src="https://image.uniqlo.com/UQ/ST3/us/imagesother/home/220124-L1-SP-nb-bodysuit.jpg">
+    </div>
+
+    <div id="divider"></div>
+
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <h3>STAY CONNECTED WITH US!</h3>
+      <p>Sign-up for emails and get a $10 off welcome coupon.</p>
+      <input type="email" id="email" class="focused" name="email" placeholder="enter your email address" required>
+      <input id="submit" type="submit" value="SIGN-UP">
+    </form>
+    <script src="JS/script.js"></script>
+
+  </body>
+
+  <footer></footer>
+</html>
