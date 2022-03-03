@@ -29,6 +29,7 @@ HEADER STYLES
   border-bottom: 1px solid black;
   position: sticky;
   top: 0px;
+  z-index: 2;
 }
 
 #header-img {
@@ -322,5 +323,25 @@ MEDIA QUERY
     width: 65%;
     cursor: pointer;
     transition: 0.3s;
+    position: relative;
   }
+
+  .shop-now-btn {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    padding: 10px;
+    color: white;
+    border-radius: 0;
+    background: #fc0d1b;
+    font-weight: bold;
+    border: solid white 2px;
+  }
+
+  .shop-now-btn:hover {
+    color: black;
+    background: #fc0d1b;
+    border: solid #fc0d1b 2px;
+  }
+
 }
