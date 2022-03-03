@@ -211,9 +211,13 @@ VIDEO BANNER
 PRODUCT BANNERS
 **************/
 
+.card-container {
+  width: 100%;
+}
+
 .product-header {
   margin: auto;
-  padding: 10px;
+  padding: 20px;
   font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
@@ -223,7 +227,6 @@ PRODUCT BANNERS
 
 #banner-image {
   width: 100%;
-  object-fit: cover;
 }
 
 /***************
@@ -277,7 +280,7 @@ MEDIA QUERY
     flex-direction: row;
     justify-content: space-between;
   }
-
+  /* Remove MOBILE MENU on larger screens */
   #burger-icon {
     display: none;
   }
@@ -285,29 +288,33 @@ MEDIA QUERY
   #burger-menu {
     display: none;
   }
+/* Display navigation bar */
 
   #nav-bar {
     display: flex;
   }
 
-  #nav-bar a {
+  .nav-link {
     padding: 20px;
     text-decoration: none;
     font-size: 1.2rem;
     color: black;
+    transition: 0.2s;
   }
 
-  /*=========
-  SCROLL-SNAP
-  =========*/
-
-  .scroll-container {
-    overflow: auto;
-    scroll-snap-type: y mandatory;
+  .nav-link:hover {
+    cursor: pointer;
+    color: #FC0D1B;
   }
 
-  .scroll-area {
-    scroll-snap-align: start;
+  /**************
+  PRODUCT BANNERS
+  **************/
+  /* FOUR grid children */
+  #main-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
   }
 
 }
