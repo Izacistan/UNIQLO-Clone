@@ -211,7 +211,7 @@ VIDEO BANNER
 PRODUCT BANNERS
 **************/
 
-.card-container {
+.card {
   width: 100%;
 }
 
@@ -323,5 +323,4 @@ MEDIA QUERY
     cursor: pointer;
     transition: 0.3s;
   }
-
 }
