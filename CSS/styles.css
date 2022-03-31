@@ -234,6 +234,7 @@ PRODUCT BANNERS
 .shop-now-btn {
   transition: 0.2s;
   padding: 10px;
+  cursor: pointer;
   color: white;
   border-radius: 0;
   background: #fc0d1b;
@@ -333,7 +334,6 @@ MEDIA QUERY
   .card-container {
     margin: 25px auto 25px auto;
     width: 70%;
-    cursor: pointer;
     transition: 0.3s;
     position: relative;
   }
